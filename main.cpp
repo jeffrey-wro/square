@@ -33,8 +33,8 @@ int main(int argc, char **argv)
 	int volt = mc.readBatteryVoltage(1);
 	printf("%d\n\n", volt);
 
-	int speed = 300;
-	int delay = 2;
+	int speed = 200;
+	int delay = 3;
 
 	int leftCount = 0;
 	int rigthCount = 0;
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 		mc.setMotorDegrees(DC, speed, leftCount, speed, rigthCount);
 		Utils::waitFor(delay);
 
-		rigthCount -= 450;
+		rigthCount -= 465;
 		mc.setMotorDegrees(DC, 0, leftCount, speed, rigthCount);
 		Utils::waitFor(delay);
 	}
